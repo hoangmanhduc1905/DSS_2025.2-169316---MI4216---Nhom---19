@@ -1,0 +1,7 @@
+\babel@toc {vietnamese}{}\relax 
+\beamer@sectionintoc {1}{1. Giới thiệu bài toán}{3}{0}{1}
+\beamer@sectionintoc {2}{2. Mô tả và Tiền xử lý dữ liệu}{5}{0}{2}
+\beamer@sectionintoc {3}{3. Khám phá dữ liệu (EDA)}{11}{0}{3}
+\beamer@sectionintoc {4}{4. Huấn luyện mô hình}{15}{0}{4}
+\beamer@sectionintoc {5}{5. Kết quả và Đánh giá}{16}{0}{5}
+\beamer@sectionintoc {6}{6. Khuyến nghị và Hướng phát triển}{19}{0}{6}
