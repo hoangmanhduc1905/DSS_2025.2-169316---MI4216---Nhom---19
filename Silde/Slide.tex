@@ -1,39 +1,44 @@
-\documentclass[aspectratio=169]{beamer}
+\documentclass[aspectratio=169, 11pt]{beamer}
 
 % --- PACKAGES ---
 \usepackage[utf8]{inputenc}
 \usepackage[T5]{fontenc}
-\usepackage{lmodern} % Khắc phục lỗi font toán học
+\usepackage{lmodern} 
 \usepackage[vietnamese]{babel}
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{tabularx}
 \usepackage{multicol}
 \usepackage{makecell}
-\usepackage{adjustbox} % Hỗ trợ co giãn bảng
+\usepackage{adjustbox} 
+\usepackage{amsmath}
+\usepackage{float}
+% Lưu ý: Không dùng enumitem trong Beamer để tránh lỗi Fatal Error
 
 % --- THEME SETTINGS ---
 \usetheme{Madrid}
 \usecolortheme{default}
 \setbeamertemplate{navigation symbols}{}
-\setbeamerfont{caption}{size=\scriptsize} % Chữ caption nhỏ lại
+\setbeamerfont{caption}{size=\scriptsize}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{itemize items}[circle]
 
 % --- THÔNG TIN TRANG BÌA ---
 \title[Dự đoán ý định mua hàng TMĐT]{Mô hình phân lớp hành vi mua hàng của khách \\ trên nền tảng Thương mại điện tử}
-\subtitle{Báo cáo Đồ án Học máy}
-\author[Hoàng Mạnh Đức]{Sinh viên thực hiện: Hoàng Mạnh Đức \\ MSSV: 20237311}
-\institute[Đại học]{Trường Đại học Bách Khoa Hà Nội}
-\date{\today}
+\subtitle{Báo cáo môn học: Hệ hỗ trợ quyết định (MI4216)}
+\author[Hoàng Mạnh Đức]{Sinh viên thực hiện: Hoàng Mạnh Đức \\ MSSV: 20237311 \\ Lớp: 169316}
+\institute[ĐHBK HN]{Trường Đại học Bách Khoa Hà Nội \\ Khoa Toán - Tin}
+\date{Tháng 04 năm 2026}
 
 \begin{document}
 
-% --- SLIDE 1: BÌA ---
+% --- SLIDE BÌA ---
 \begin{frame}
     \titlepage
 \end{frame}
 
-% --- SLIDE 2: MỤC LỤC ---
-\begin{frame}{Nội dung trình bày}
+% --- SLIDE MỤC LỤC ---
+\begin{frame}{Nội dung báo cáo}
     \tableofcontents
 \end{frame}
 
@@ -41,42 +46,81 @@
 \section{1. Giới thiệu bài toán}
 % ==========================================
 
-\begin{frame}{1.1 Bối cảnh \& Lý do chọn đề tài}
-    \textbf{Bối cảnh ngành TMĐT:}
+\begin{frame}{1.1 Bối cảnh ngành Thương mại điện tử}
     \begin{itemize}
-        \item Lượng truy cập (Traffic) cực cao nhưng tỷ lệ chuyển đổi (Conversion Rate) rất thấp.
-        \item Tỷ lệ "bỏ rơi giỏ hàng" (Cart Abandonment Rate) trung bình lên tới gần \textbf{70\%}.
-        \item Dữ liệu Nhật ký sự kiện (Event Logs) khổng lồ là mỏ vàng để Học máy "đọc vị" người dùng.
-    \end{itemize}
-    
-    \vspace{0.3cm}
-    \textbf{Lý do chọn đề tài:}
-    \begin{itemize}
-        \item \textbf{Về mặt kinh doanh:} Khắc phục lãng phí do Marketing đại trà, chuyển sang Marketing cá nhân hóa (Targeted Marketing), tối ưu biên lợi nhuận.
-        \item \textbf{Về mặt kỹ thuật:} Khai thác dữ liệu sự kiện thô (Raw Event Logs), giải quyết thách thức trích xuất đặc trưng (Feature Engineering) và kiểm soát rò rỉ dữ liệu (Data Leakage).
+        \item \textbf{Sự bùng nổ:} TMĐT đang thay đổi hoàn toàn thói quen mua sắm của người tiêu dùng.
+        \vspace{0.3cm}
+        \item \textbf{Nghịch lý kinh doanh:} Lượng truy cập (Traffic) nền tảng rất cao, nhưng tỷ lệ chuyển đổi (Conversion Rate) lại thấp. 
+        \vspace{0.3cm}
+        \item \textbf{Thực trạng:} Tỷ lệ "bỏ rơi giỏ hàng" (Cart Abandonment Rate) trung bình lên tới gần \textbf{70\%}.
+        \vspace{0.3cm}
+        \item \textbf{Cơ hội:} Hệ thống lưu trữ dữ liệu khổng lồ dưới dạng Nhật ký sự kiện (Event Logs). Đây là cơ sở dữ liệu quan trọng để ứng dụng Học máy nhằm "đọc vị" ý định của người dùng thời gian thực.
     \end{itemize}
 \end{frame}
 
-\begin{frame}{1.2 Đối tượng sử dụng \& Hỗ trợ ra quyết định}
-    Mô hình phục vụ 3 phòng ban cốt lõi:
+\begin{frame}{1.2 Lý do chọn đề tài \& Đối tượng sử dụng}
+    \textbf{Lý do chọn đề tài:}
+    \begin{itemize}
+        \item \textbf{Về mặt kinh doanh:} Khắc phục lãng phí do Marketing đại trà, chuyển hướng sang Marketing cá nhân hóa (Targeted Marketing).
+        \item \textbf{Về mặt kỹ thuật:} Giải quyết bài toán khó trong việc khai thác dữ liệu sự kiện thô, trích xuất đặc trưng và ngăn chặn rò rỉ dữ liệu.
+    \end{itemize}
+    
+    \vspace{0.5cm}
+    \textbf{Hệ thống phục vụ 3 phòng ban cốt lõi:}
     \begin{enumerate}
-        \item \textbf{Bộ phận Marketing:} Tối ưu hóa ngân sách quảng cáo bám đuôi (Retargeting) và cấp phát Voucher thông minh (Smart Vouchering).
-        \item \textbf{Bộ phận CSKH:} Can thiệp thời gian thực (Real-time Intervention) bằng Pop-up Live Chat khi khách hàng dừng lâu ở trang thanh toán.
-        \item \textbf{Bộ phận UI/UX:} Tùy biến giao diện (Dynamic UI), tinh gọn nút thanh toán cho khách hàng có ý định mua cao.
+        \item \textbf{Bộ phận Marketing:} Tối ưu ngân sách quảng cáo \& cấp phát Voucher.
+        \item \textbf{Bộ phận CSKH:} Can thiệp thời gian thực (Live-chat).
+        \item \textbf{Bộ phận UI/UX:} Tùy biến giao diện (Dynamic UI) theo ý định mua.
     \end{enumerate}
 \end{frame}
 
 % ==========================================
-\section{2. Mô tả và Tiền xử lý dữ liệu}
+\section{2. Mục tiêu hỗ trợ ra quyết định}
 % ==========================================
 
-\begin{frame}{2.1 Nguồn dữ liệu \& Từ điển dữ liệu}
-    \textbf{Nguồn:} eCommerce Events History in Cosmetics Shop (Kaggle). Quy mô > 20 triệu bản ghi.
+\begin{frame}{2.1 Quyết định phân bổ ngân sách khuyến mãi}
+    \textbf{Bài toán:} Có nên cấp phát mã giảm giá (Voucher) cho khách hàng trong phiên hiện tại không? Mức giảm là bao nhiêu?
     
-    \vspace{0.2cm}
-    \begin{table}
+    \vspace{0.3cm}
+    \textbf{Giải pháp từ mô hình AI:} Thay vì "rải" mã giảm giá đại trà, hệ thống chia khách hàng làm 3 nhóm:
+    \begin{itemize}
+        \item \textbf{Chắc chắn mua (Xác suất $>$ 80\%):} Khách đã có ý định rõ ràng. $\rightarrow$ \textit{Không tặng Voucher} để bảo vệ biên lợi nhuận.
+        \item \textbf{Đang phân vân (Xác suất 40\% - 80\%):} Khách thêm đồ vào giỏ nhưng chần chừ. $\rightarrow$ \textit{Tặng Pop-up Voucher 10 phút} để ép hiệu ứng FOMO.
+        \item \textbf{Không có ý định (Xác suất $<$ 40\%):} Chỉ lướt xem giá. $\rightarrow$ \textit{Không tặng Voucher} để tránh lãng phí.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{2.2 Quyết định quảng cáo bám đuôi \& Can thiệp CSKH}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \textbf{Tối ưu Quảng cáo Retargeting:}
+            \begin{itemize}
+                \item Chạy quảng cáo cho 100\% người thoát trang là "đốt tiền".
+                \item \textbf{Quyết định:} Chỉ lọc Top 20\% khách hàng có xác suất mua cao nhất đẩy lên Facebook/Google. 
+                \item $\rightarrow$ Tiết kiệm CAC, tăng vọt ROAS.
+            \end{itemize}
+        \end{column}
+        
+        \begin{column}{0.5\textwidth}
+            \textbf{Can thiệp thời gian thực (CSKH):}
+            \begin{itemize}
+                \item Khách có xác suất chốt đơn cao nhưng dừng ở trang thanh toán quá 3 phút?
+                \item \textbf{Quyết định:} Hệ thống báo động để nhân viên chủ động Live-chat: \textit{"Chào bạn, bạn có cần hỗ trợ phí vận chuyển không?"}
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% ==========================================
+\section{3. Mô tả và Tiền xử lý dữ liệu}
+% ==========================================
+
+\begin{frame}{3.1 Nguồn dữ liệu \& Từ điển dữ liệu thô}
+    \textbf{Nguồn:} eCommerce Events History in Cosmetics Shop (Kaggle). \\Quy mô: $>$ 20 triệu bản ghi nhật ký sự kiện lướt web.
+    
+    \vspace{0.3cm}
+    \begin{table}[H]
         \centering
-        \caption{Từ điển dữ liệu nguyên bản (Raw Event Logs)}
         \resizebox{\textwidth}{!}{
         \begin{tabular}{lll}
             \toprule
@@ -85,149 +129,136 @@
             \texttt{event\_time} & String & Thời điểm xảy ra sự kiện (UTC). \\
             \texttt{event\_type} & String & Loại tương tác: \texttt{view}, \texttt{cart}, \texttt{remove\_from\_cart}, \texttt{purchase}. \\
             \texttt{product\_id} & int64 & Mã định danh sản phẩm. \\
-            \texttt{category\_id} / \texttt{category\_code} & int64 / string & Định danh danh mục \& Tên chuỗi phân cấp. \\
-            \texttt{brand} & string & Thương hiệu sản phẩm. \\
+            \texttt{category\_id/code} & int64 / string & Mã danh mục \& Chuỗi phân cấp. \\
+            \texttt{brand} & string & Tên thương hiệu. \\
             \texttt{price} & Float64 & Giá sản phẩm (USD). \\
-            \texttt{user\_id} / \texttt{user\_session} & int64 / string & Mã khách hàng \& Mã phiên truy cập. \\
+            \texttt{user\_session} & string & Mã phiên truy cập. \\
             \bottomrule
         \end{tabular}
         }
     \end{table}
 \end{frame}
 
-\begin{frame}{2.2 Kiểm tra chất lượng dữ liệu thô (Phần 1)}
+\begin{frame}{3.2 Kiểm tra chất lượng dữ liệu: Kiểu dữ liệu \& Null}
     \begin{columns}
-        \begin{column}{0.5\textwidth}
-            \textbf{1. Kiểm tra Kiểu dữ liệu (Data Types):}
+        \begin{column}{0.4\textwidth}
             \begin{itemize}
-                \item Cột \texttt{event\_time} ban đầu được hệ thống đọc dưới dạng chuỗi văn bản (Object).
-                \item \textit{Vấn đề:} Cần chuyển đổi sang định dạng \texttt{Datetime} để phục vụ tính toán thời lượng lướt web.
+                \item \textbf{Kiểu dữ liệu:} Cột \texttt{event\_time} bị nhận diện là String, cần đổi sang \texttt{Datetime}.
+                \item \textbf{Dữ liệu thiếu:} \texttt{brand} khuyết 42\%, \texttt{category\_code} khuyết 98\%.
             \end{itemize}
-            \begin{center}
-                \includegraphics[width=0.9\textwidth]{IMG/Datavalid1.png}
-            \end{center}
         \end{column}
         
-        \begin{column}{0.5\textwidth}
-            \textbf{2. Kiểm tra Dữ liệu thiếu (Missing Values):}
-            \begin{itemize}
-                \item Các trường giao dịch (session, type, price) đầy 100\%.
-                \item \texttt{brand} khuyết $\sim$42\% (phản ánh thực tế nhiều hàng giá rẻ không thương hiệu).
-                \item \texttt{category\_code} khuyết >98\%.
-            \end{itemize}
+        \begin{column}{0.6\textwidth}
             \begin{center}
+                \includegraphics[width=0.9\textwidth]{IMG/Datavalid1.png} \\
+                \vspace{0.2cm}
                 \includegraphics[width=0.9\textwidth]{IMG/NullCheck.png}
             \end{center}
         \end{column}
     \end{columns}
 \end{frame}
 
-\begin{frame}{2.2 Kiểm tra chất lượng dữ liệu thô (Phần 2)}
+\begin{frame}{3.3 Kiểm tra chất lượng dữ liệu: Trùng lặp \& Ngoại lệ}
     \begin{columns}
-        \begin{column}{0.5\textwidth}
-            \textbf{3. Kiểm tra Trùng lặp (Duplication):}
+        \begin{column}{0.4\textwidth}
             \begin{itemize}
-                \item Hệ thống ghi nhận \textbf{5.2\%} các dòng bị trùng lặp hoàn toàn đến từng mili-giây.
-                \item \textit{Nguyên nhân:} Việc người dùng click đúp (double-click) do lỗi mạng hoặc độ trễ giao diện.
+                \item \textbf{Trùng lặp:} Phát hiện 5.2\% dữ liệu trùng lặp hoàn toàn do lỗi double-click.
+                \item \textbf{Ngoại lệ (Outliers):} Cột \texttt{price} chứa giá trị âm do lỗi hệ thống, hoặc giá cực cao bất thường.
             \end{itemize}
-            \begin{center}
-                \includegraphics[width=0.9\textwidth]{IMG/DupCheck.png}
-            \end{center}
         \end{column}
         
-        \begin{column}{0.5\textwidth}
-            \textbf{4. Kiểm tra Ngoại lệ (Outliers):}
-            \begin{itemize}
-                \item Cột \texttt{price} có xuất hiện các giá trị âm ($<0$) do lỗi hệ thống backend.
-                \item Xuất hiện một số sản phẩm có giá cao bất thường (lên tới hàng ngàn USD) gây nhiễu cho mô hình.
-            \end{itemize}
+        \begin{column}{0.6\textwidth}
             \begin{center}
+                \includegraphics[width=0.9\textwidth]{IMG/DupCheck.png} \\
+                \vspace{0.2cm}
                 \includegraphics[width=0.9\textwidth]{IMG/Describe.png}
             \end{center}
         \end{column}
     \end{columns}
 \end{frame}
 
-
-\begin{frame}{2.3 Tiền xử lý - Giai đoạn 1: Làm sạch dữ liệu (Phần 1)}
+\begin{frame}{3.4 Làm sạch dữ liệu (Data Cleaning)}
     \begin{columns}
         \begin{column}{0.5\textwidth}
-            \textbf{Xử lý trùng lặp và ngoại lệ:}
+            \textbf{Các bước xử lý:}
             \begin{itemize}
-                \item \textbf{Loại bỏ trùng lặp:} Tiến hành loại bỏ hoàn toàn các dòng trùng lặp (Drop duplicates).
-                \item \textbf{Xóa giá âm/0:} Các bản ghi có \texttt{price $\le$ 0} bị loại bỏ vì không mang ý nghĩa kinh doanh.
-                \item \textbf{Giới hạn ngoại lệ (Winsorization):} Các mặt hàng có giá lớn hơn phân vị thứ 99 (99th percentile) được giới hạn lại để giảm tác động của nhiễu.
+                \item Loại bỏ hoàn toàn dòng trùng lặp.
+                \item Xóa các dòng có \texttt{price $\le$ 0}.
+                \item Giới hạn ngoại lệ giá (Winsorization) ở phân vị 99th.
+                \item Điền giá trị Null của \texttt{brand} bằng "Unknown".
+                \item Xóa cột \texttt{category\_code}.
+                \item Xóa các \texttt{user\_session} rác bị Null.
             \end{itemize}
         \end{column}
+        
         \begin{column}{0.5\textwidth}
             \begin{center}
-                \includegraphics[width=\textwidth]{IMG/ETL1.png} \\
-                \vspace{0.2cm}
-                \scriptsize{\textit{Làm sạch dữ liệu thô}}
+                \includegraphics[width=\textwidth]{IMG/ETL1.png}
             \end{center}
         \end{column}
     \end{columns}
 \end{frame}
 
-\begin{frame}{2.3 Tiền xử lý - Giai đoạn 1: Làm sạch dữ liệu (Phần 2)}
-    \begin{columns}
-        \begin{column}{0.5\textwidth}
-            \textbf{Xử lý dữ liệu thiếu \& Cột không đóng góp:}
-            \begin{itemize}
-                \item \textbf{Điền khuyết \texttt{brand}:} Thay vì xóa (sẽ mất 42\% traffic), giá trị \texttt{Null} được điền bằng \textit{"Unknown"}. (Sản phẩm "Không thương hiệu" cũng là đặc trưng hành vi).
-                \item \textbf{Xóa cột nhiễu:} Xóa \texttt{category\_code} (khuyết 98\%) và \texttt{user\_id} (không giúp phân loại phiên).
-                \item \textbf{Xử lý session rác:} Loại bỏ các dòng có \texttt{user\_session} bị Null (khoảng 2.2\%).
-            \end{itemize}
-        \end{column}
-        \begin{column}{0.5\textwidth}
-            \begin{center}
-                \includegraphics[width=\textwidth]{IMG/ETL2.png} \\
-                \vspace{0.2cm}
-                \scriptsize{\textit{Xử lý khuyết dữ liệu và cột không đóng góp}}
-            \end{center}
-        \end{column}
-    \end{columns}
+\begin{frame}{3.5 Trích xuất đặc trưng (Feature Engineering)}
+    \begin{itemize}
+        \item \textbf{Biến mục tiêu:} $Y = 1$ nếu phiên có giao dịch mua (\texttt{purchase}), ngược lại $Y = 0$. \textit{(Lưu ý: Xóa toàn bộ event mua khỏi tập train để chống Leakage)}.
+        \vspace{0.2cm}
+        \item \textbf{Đặc trưng Lịch sử KH (RFM):} 
+        \begin{itemize}
+            \item \textbf{R:} Số ngày kể từ lần mua cuối.
+            \item \textbf{F:} Tổng số phiên mua hàng trong quá khứ.
+            \item \textbf{M:} Tổng tiền đã chi tiêu. (Tất cả quy về thang điểm 1-4).
+        \end{itemize}
+        \vspace{0.2cm}
+        \item \textbf{Đặc trưng Phiên:} \texttt{total\_views}, \texttt{total\_carts}, \texttt{total\_removes}, \texttt{session\_duration}, \texttt{unique\_products}, \texttt{avg\_price}...
+    \end{itemize}
 \end{frame}
-
-\begin{frame}{2.4 Tiền xử lý - Giai đoạn 2: Trích xuất theo Phiên (Sessionization)}
-    \begin{columns}
-        \begin{column}{0.5\textwidth}
-            \textbf{Tiên xử lý:}
-            \begin{itemize}
-                \item \textbf{Biến mục tiêu (Target):} Gán $Y=1$ nếu phiên có sự kiện \texttt{purchase}, ngược lại $Y=0$.
-                \item \textbf{Xóa} toàn bộ sự kiện \texttt{purchase} khỏi tập huấn luyện.
-             
-            \end{itemize}
-            \textbf{Tổng hợp đặc trưng:} 
-                \begin{itemize}
-                    \item \texttt{total\_views}, \texttt{total\_carts}
-                    \item \texttt{session\_duration}
-                    \item \texttt{unique\_products}, \texttt{avg\_price}, \texttt{max\_price}
-                \end{itemize}
-        \end{column}
-        \begin{column}{0.5\textwidth}
-            \begin{center}
-                \includegraphics[width=0.9\textwidth]{IMG/ETL3.png}
-                \vspace{0.2cm}
-                
-            \end{center}
-        \end{column}
-    \end{columns}
+\begin{frame}{3.5 Trích xuất đặc trưng (Feature Engineering)}
+\begin{table}[H]
+    \centering
+    \caption{5 dòng dữ liệu sau trích xuất }
+    \label{tab:session_features_1}
+    \begin{tabular}{l cccc cccc c}
+        \toprule
+        \textbf{user\_session} & \textbf{day} & \textbf{hr} & \textbf{views} & \textbf{carts} & \textbf{rmvs} & \textbf{dur(s)} & \textbf{avg\_p} & \textbf{max\_p} & \textbf{1\_brd} \\
+        \midrule
+        bfb1...105f & 7 & 15 & 1 & 0 & 0 & 0    & 14.29 & 14.29 & 1 \\
+        7a79...b958 & 7 & 9  & 1 & 0 & 0 & 0    & 7.14  & 7.14  & 1 \\
+        50fb...8508 & 3 & 21 & 6 & 2 & 0 & 1292 & 5.49  & 15.48 & 0 \\
+        6582...8711 & 6 & 15 & 1 & 0 & 0 & 0    & 13.13 & 13.13 & 1 \\
+        16e6...5e78 & 5 & 9  & 7 & 0 & 0 & 545  & 3.73  & 18.89 & 0 \\
+        \bottomrule
+    \end{tabular}
+    
+    
+    \begin{tabular}{l cc cccc c cc}
+        \toprule
+        \textbf{user\_session} & \textbf{u\_prd} & \textbf{u\_brd} & \textbf{R} & \textbf{F} & \textbf{M} & \textbf{RFM} & \textbf{enc\_brd} & \textbf{is\_purchased} \\
+        \midrule
+        bfb1...105f & 1 & 1 & 0 & 0 & 0 & 0 & 0.039 & 0 \\
+        7a79...b958 & 1 & 1 & 0 & 0 & 0 & 0 & 0.029 & 0 \\
+        50fb...8508 & 6 & 2 & 2 & 3 & 2 & 7 & 0.039 & 0 \\
+        6582...8711 & 1 & 1 & 0 & 0 & 0 & 0 & 0.035 & 0 \\
+        16e6...5e78 & 7 & 3 & 0 & 0 & 0 & 0 & 0.039 & 0 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
 \end{frame}
-
 % ==========================================
-\section{3. Khám phá dữ liệu (EDA)}
+\section{4. Khám phá dữ liệu (EDA)}
 % ==========================================
 
-\begin{frame}{3.1 EDA: Phân bố nhãn (Class Imbalance)}
+\begin{frame}{4.1 EDA: Phân bố nhãn mục tiêu (Class Imbalance)}
     \begin{columns}
         \begin{column}{0.5\textwidth}
             \begin{itemize}
                 \item Dữ liệu mất cân bằng nhãn cực kỳ nghiêm trọng.
-                \item Số lượng phiên \textbf{Không mua (0)} áp đảo hoàn toàn phiên \textbf{Có mua (1)}.
-                \item Thách thức lớn cho các thuật toán Học máy cơ bản $\rightarrow$ Cần kỹ thuật lấy mẫu (Sampling) ở bước huấn luyện.
+                \item \textbf{Nhãn 0 (Không mua):} 96.90\%
+                \item \textbf{Nhãn 1 (Có mua):} 3.10\%
+                \item \textbf{Hệ quả:} Thuật toán sẽ có xu hướng đoán toàn bộ là 0. Cần sử dụng thuật toán gán trọng số lớp (Class Weights) ở bước huấn luyện.
             \end{itemize}
         \end{column}
+        
         \begin{column}{0.5\textwidth}
             \begin{center}
                 \includegraphics[width=0.9\textwidth]{IMG/phanbonhan.png}
@@ -236,31 +267,78 @@
     \end{columns}
 \end{frame}
 
-\begin{frame}{3.2 EDA: Phân bố đặc trưng}
+\begin{frame}{4.2 EDA: Phân bố hành vi trong phiên truy cập}
     \begin{center}
-        \includegraphics[width=0.5\textwidth]{IMG/feature_distributions.png}
+        \includegraphics[width=0.4\textwidth]{IMG/totalview.png} \hfill
+        \includegraphics[width=0.4\textwidth]{IMG/session.png} \\
+        \vspace{0.2cm}
+        \includegraphics[width=0.4\textwidth]{IMG/totalcart.png} \hfill
+        \includegraphics[width=0.4\textwidth]{IMG/totalreview.png} 
     \end{center}
 \end{frame}
 
-\begin{frame}{3.2 EDA: Các Insight từ phân bố đặc trưng}
+\begin{frame}{4.3 EDA: Insight từ Hành vi truy cập}
     \begin{itemize}
-        \item \textbf{Insight 1 - Nhóm "Bounce" (Thoát trang nhanh):} Tập trung ở mốc 1 \texttt{view}, 0 giây. Là nhóm click nhầm, không có tương tác.
-        \item \textbf{Insight 2 - Xóa khỏi giỏ không phải tín hiệu xấu:} Biểu đồ \texttt{total\_removes} của Lớp 1 trải dài. Điều này thể hiện sự so sánh, chọn lọc kỹ (Active Shopping) của người có ý định mua.
-        \item \textbf{Insight 3 - Window Shopping:} Người mua hàng thường xem từ 2 đến 6 \texttt{unique\_products} trước khi chốt đơn.
-        \item \textbf{Insight 4 - Nghịch lý Giá cả:} Phân bố \texttt{avg\_price} của hai Lớp chồng khít lên nhau. Giá tiền KHÔNG phải yếu tố phân loại ý định mua!
+        \item \textbf{Nhóm "Bounce" (Thoát trang nhanh):} Tập trung ở mốc 1 view, 0 giây. Đây là nhóm khách hàng "click dạo" hoặc vào nhầm link.
+        \vspace{0.3cm}
+        \item \textbf{"Thêm giỏ" \& "Xóa khỏi giỏ" đều tích cực:} Nhóm chốt đơn (Lớp 1) có tỷ lệ \texttt{total\_removes} trải dài. Việc xóa khỏi giỏ phản ánh sự cân nhắc, so sánh kỹ lưỡng (Active Shopping) chứ không phải tín hiệu xấu.
+        \vspace{0.3cm}
+        \item \textbf{Quy trình so sánh:} Khách hiếm khi mua ngay món đầu tiên. Họ xem từ 2 đến 6 \texttt{unique\_products} trước khi chốt đơn.
     \end{itemize}
 \end{frame}
 
-\begin{frame}{3.3 EDA: Tương quan giữa các đặc trưng}
+\begin{frame}{4.4 EDA: So sánh Lịch sử khách hàng (RFM)}
+    \begin{center}
+        \includegraphics[width=0.4\textwidth]{IMG/RScore.png} \hfill
+        \includegraphics[width=0.4\textwidth]{IMG/FScore.png} \\
+        \vspace{0.2cm}
+        \includegraphics[width=0.4\textwidth]{IMG/MScore.png} \hfill
+        \includegraphics[width=0.4\textwidth]{IMG/RFM.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}{4.5 EDA: Insight từ Đặc trưng RFM}
+    \begin{itemize}
+        \item \textbf{Phân hóa dữ liệu rõ rệt:} Tồn tại sự chênh lệch khổng lồ giữa hai nhóm. Nhãn 1 (Có mua) có tổng điểm RFM trung bình đạt 7.15, cao gấp 3.3 lần Nhãn 0.
+        \vspace{0.3cm}
+        \item \textbf{Sức mạnh dự báo (Predictive Power):} Các chỉ số R, F, M độc lập đều cho thấy nhóm Nhãn 1 áp đảo. Đây sẽ là nhóm đặc trưng đóng góp trọng số lớn nhất cho mô hình Học máy.
+        \vspace{0.3cm}
+        \item \textbf{Bản chất kinh doanh:} Tỷ lệ chuyển đổi phụ thuộc lớn vào lòng trung thành. Khách chi tiêu cao (M lớn), mua thường xuyên (F lớn), tương tác gần đây (R lớn) rất dễ chốt đơn tiếp.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{4.6 EDA: Yếu tố Thời gian}
     \begin{columns}
-        \begin{column}{0.5\textwidth}
-            \textbf{Insight Tương quan:}
+        \begin{column}{0.4\textwidth}
+            \textbf{Phân tích Chu kỳ thời gian:}
             \begin{itemize}
-                \item \textbf{Giỏ hàng là Vua:} \texttt{total\_carts} \& \texttt{total\_removes} tương quan dương cao nhất (0.34) với biến mục tiêu. \texttt{views} chỉ đạt 0.12.
-                \item \textbf{Mức giá độc lập:} \texttt{avg\_price} có tương quan xấp xỉ 0 với nhãn $\rightarrow$ Sẽ bị loại bỏ khi đưa vào mô hình để giảm nhiễu.
-                \item \textbf{Đa cộng tuyến:} \texttt{session\_duration} và \texttt{unique\_products} tương quan rất mạnh (0.84).
+                \item Xác suất mua hàng đạt đỉnh vào khung giờ sáng (\textbf{9:00 - 11:00}).
+                \item Chạm đáy vào khung giờ rạng sáng.
+                \item Đặc trưng \texttt{day\_of\_week} (ngày trong tuần) ít biến động $\rightarrow$ Biến dự báo yếu (Weak Predictor).
             \end{itemize}
         \end{column}
+        
+        \begin{column}{0.6\textwidth}
+            \begin{center}
+                \includegraphics[width=0.7\textwidth]{IMG/Hour.png} \\
+                \vspace{0.2cm}
+                \includegraphics[width=0.7\textwidth]{IMG/Day.png}
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{4.7 EDA: Ma trận Tương quan (Correlation)}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \textbf{Nhận xét từ Ma trận:}
+            \begin{itemize}
+                \item \textbf{Đa cộng tuyến mạnh:} Nhóm định giá (avg, max) tương quan 0.92.
+                \item \textbf{Mức giá không quan trọng:} Tương quan giữa giá và nhãn xấp xỉ 0. Nghĩa là giá cao hay thấp không quyết định việc khách chốt đơn.
+                \item \textbf{Đặc tính phi tuyến:} Các biến chỉ tương quan yếu với nhãn. Bắt buộc phải dùng mô hình Cây (Tree-based) thay vì Tuyến tính.
+            \end{itemize}
+        \end{column}
+        
         \begin{column}{0.5\textwidth}
             \begin{center}
                 \includegraphics[width=\textwidth]{IMG/Corr.png}
@@ -270,145 +348,255 @@
 \end{frame}
 
 % ==========================================
-\section{4. Huấn luyện mô hình}
+\section{5. Huấn luyện mô hình}
 % ==========================================
 
-\begin{frame}{4.1 Chiến lược xây dựng mô hình}
-    \textbf{Mục tiêu Đánh giá:} Tập trung tối ưu \textbf{F1-Score} và \textbf{Độ phủ (Recall)} nhằm không bỏ lọt khách hàng tiềm năng. \\
-    \textbf{Feature Selection:} Bỏ \texttt{avg\_price} và \texttt{max\_price}.
-    
-    \vspace{0.3cm}
-    \textbf{Chiến lược xử lý Mất cân bằng (Ensemble-based Undersampling):}
+\begin{frame}{5.1 Chiến lược Đánh giá \& Xử lý Mất cân bằng}
+    \textbf{Mục tiêu Đánh giá:}
     \begin{itemize}
-        \item Không Undersampling thông thường (gây mất mát thông tin Lớp 0).
-        \item \textbf{Giải pháp:} Chia tập Lớp 0 thành 11 phần nhỏ. Ghép từng phần với toàn bộ tập Lớp 1 $\rightarrow$ Tạo 11 tập dữ liệu cân bằng.
-        \item Huấn luyện 11 mô hình con và kết hợp kết quả (Voting/Averaging) $\rightarrow$ Giảm phương sai (Variance), tận dụng 100\% dữ liệu.
+        \item Bỏ qua Accuracy. Tối ưu tuyệt đối vào chỉ số \textbf{ROC-AUC}.
+        \item Theo dõi sát \textbf{Recall} để đảm bảo không bỏ lọt khách hàng.
+    \end{itemize}
+
+    \vspace{0.4cm}
+    \textbf{Cấu hình Trọng số chống thiên lệch (Class Weights):} \\
+    Ép thuật toán "chú ý" vào nhóm chốt đơn thông qua công thức:
+    $$ W_j = \frac{N_{total}}{k \times N_j} $$
+    \begin{itemize}
+        \item \textbf{Trọng số Nhãn 0 ($W_0$):} $0.516$
+        \item \textbf{Trọng số Nhãn 1 ($W_1$):} $16.110$
+        \item \textit{Phạt nặng gấp 31 lần nếu đoán sai khách hàng có mua hàng!}
     \end{itemize}
 \end{frame}
 
 % ==========================================
-\section{5. Kết quả và Đánh giá}
+\section{6. Kết quả và đánh giá}
 % ==========================================
 
-\begin{frame}{5.1 Baseline Model \& Mô hình trước xử lý mất cân bằng}
+\begin{frame}{6.1 Kết quả Mô hình cơ sở (Logistic Regression)}
     \begin{columns}
         \begin{column}{0.5\textwidth}
-            \textbf{1. Baseline (Logistic Regression)} \\
-            (Ngưỡng 0.73)
-            \resizebox{\textwidth}{!}{
-            \begin{tabular}{lccc}
-                \toprule
-                 & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} \\
-                \midrule
-                Lớp 0 & 0.98 & 0.95 & 0.97 \\
-                \textbf{Lớp 1} & \textbf{0.24} & \textbf{0.49} & \textbf{0.32} \\
-                \bottomrule
-            \end{tabular}
-            }
-            \vspace{0.3cm}
+            \textbf{Thiết lập Hồi quy Logistic:}
+            \begin{itemize}
+                \item Trọng số $W_0 = 0.516$, $W_1 = 16.110$.
+                \item Số vòng lặp tối đa: 100.
+            \end{itemize}
             
-            \textbf{2. LightGBM (Trước xử lý)} \\
-            \resizebox{\textwidth}{!}{
-            \begin{tabular}{lccc}
-                \toprule
-                 & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} \\
-                \midrule
-                Lớp 0 & 0.98 & 0.95 & 0.97 \\
-                \textbf{Lớp 1} & \textbf{0.29} & \textbf{0.55} & \textbf{0.37} \\
-                \bottomrule
-            \end{tabular}
-            }
+            \vspace{0.5cm}
+            \textbf{Kết quả:}
+            \begin{itemize}
+                \item \textbf{Điểm ROC-AUC:} 0.9215.
+                \item Đường cong ROC thể hiện khả năng phân tách cơ bản nhưng chưa thực sự tối ưu do giới hạn tuyến tính.
+            \end{itemize}
         \end{column}
         
         \begin{column}{0.5\textwidth}
-            \textbf{3. Cây quyết định (Trước xử lý)} \\
             \begin{center}
-                \includegraphics[width=0.8\textwidth]{IMG/cayquyetdinh.png}
-                \resizebox{\textwidth}{!}{
-                \begin{tabular}{lccc}
-                    \toprule
-                     & \textbf{Prec} & \textbf{Recall} & \textbf{F1} \\
-                    \midrule
-                    Lớp 1 & 0.27 & 0.52 & 0.35 \\
-                    \bottomrule
-                \end{tabular}
-                }
+                \includegraphics[width=\textwidth]{IMG/ROC.png}
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+\begin{frame}{6.2 Kết quả Mô hình }
+    \begin{table}[H]
+        \centering
+        \caption{Báo cáo kết quả phân loại}
+        \resizebox{0.7\textwidth}{!}{
+        \begin{tabular}{l cccc}
+            \toprule
+              \textbf{Nhóm / Chỉ số} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
+            \midrule
+            \textbf{0 (Không mua)} & 0.99 & 0.83 & 0.91 & 872,934 \\
+            \textbf{1 (Có mua)}    & 0.14 & \textbf{0.85} & \textbf{0.24} & 27,961 \\
+            \midrule
+            \textbf{Accuracy} & \multicolumn{2}{c}{} & 0.83 & 900,895 \\
+            \bottomrule
+        \end{tabular}
+        }
+    \end{table}
+
+\end{frame}
+\begin{frame}{6.2 Kết quả Mô hình Random Forest}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \textbf{Thiết lập Random Forest:}
+            \begin{itemize}
+                \item 100 cây, Sâu tối đa 12.
+                \item Có áp dụng Class Weights.
+                \item Ngưỡng Youden tối ưu: 0.5759.
+            \end{itemize}
+            
+            \vspace{0.3cm}
+            \textbf{Kết quả:}
+            \begin{itemize}
+                \item \textbf{ROC-AUC bứt phá lên 0.9671.}
+                \item Khả năng xếp hạng xác suất cực kỳ lý tưởng cho bài toán Remarketing.
+            \end{itemize}
+        \end{column}
+        
+        \begin{column}{0.5\textwidth}
+            \begin{center}
+                \includegraphics[width=\textwidth]{IMG/ROC_RF.png}
             \end{center}
         \end{column}
     \end{columns}
 \end{frame}
 
-\begin{frame}{5.2 Hiệu năng Mô hình Sau khi áp dụng Ensemble}
-    \textbf{1. Ensemble Cây quyết định (Random Forest + Bagging)} \\
-    (Ngưỡng 0.88)
+\begin{frame}{6.3 Đánh giá chi tiết Random Forest}
     \begin{table}[H]
         \centering
-        \begin{tabular}{lccc}
+        \caption{Báo cáo kết quả phân loại (Random Forest)}
+        \resizebox{0.7\textwidth}{!}{
+        \begin{tabular}{l cccc}
             \toprule
-             & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} \\
+            \textbf{Nhóm / Chỉ số} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
             \midrule
-            Lớp 0 & 0.98 & 0.96 & 0.97 \\
-            \textbf{Lớp 1} & \textbf{0.27} & \textbf{0.51} & \textbf{0.36} \\
+            \textbf{0 (Không mua)} & 1.00 & 0.90 & 0.95 & 872,934 \\
+            \textbf{1 (Có mua)}    & 0.24 & \textbf{0.96} & 0.38 & 27,961 \\
+            \midrule
+            \textbf{Accuracy}      & \multicolumn{2}{c}{} & 0.90 & 900,895 \\
             \bottomrule
         \end{tabular}
+        }
     \end{table}
-
-    \textbf{2. Ensemble LightGBM (Mô hình tốt nhất được chọn)} \\
-    \begin{table}[H]
-        \centering
-        \begin{tabular}{lccc}
-            \toprule
-             & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} \\
-            \midrule
-            Lớp 0 & 0.99 & 0.95 & 0.97 \\
-            \textbf{Lớp 1} & \textbf{0.27} & \textbf{0.61} & \textbf{0.37} \\
-            \bottomrule
-        \end{tabular}
-    \end{table}
-\end{frame}
-
-\begin{frame}{5.3 Đánh giá Tổng thể (Trade-off Phân tích)}
-    \begin{itemize}
-        \item \textbf{Sức mạnh nội tại:} Ngay từ đầu, LightGBM đã áp đảo Cây quyết định (F1: 0.37 so với 0.35), chứng minh ưu thế của Tăng cường độ dốc (Gradient Boosting).
-        \item \textbf{Hiệu năng Ensemble (Sự đánh đổi):}
-        \begin{itemize}
-            \item Precision giảm nhẹ $2\%$ (từ 0.29 $\rightarrow$ 0.27).
-            \item \textbf{Recall tăng vọt $6\%$} (từ 0.55 $\rightarrow$ 0.61). F1-Score giữ vững.
-        \end{itemize}
-        \item \textbf{Ý nghĩa Kinh doanh:} Với 22.320 giao dịch Lớp 1 trong tập test, Recall tăng 6\% giúp bắt trúng thêm $\sim$\textbf{1.339 khách hàng tiềm năng}. Vì chi phí Retargeting (Email/Push) rất rẻ, việc hi sinh 2\% chuẩn xác để tăng độ phủ mang lại \textbf{Lợi nhuận ròng (Net Profit) vượt trội}.
-    \end{itemize}
-\end{frame}
-
-% ==========================================
-\section{6. Khuyến nghị và Hướng phát triển}
-% ==========================================
-
-\begin{frame}{6.1 Khuyến nghị Ra quyết định (Actionable Insights)}
-    \begin{enumerate}
-        \item \textbf{Targeted Retargeting:} Ngừng chạy Ads đại trà. Chỉ tập trung ngân sách cho tập khách hàng được gán \textbf{Nhãn 1} $\rightarrow$ Giảm CAC, tăng vọt ROAS.
-        \item \textbf{Smart Vouchering (Phân phối mã giảm giá):}
-        \begin{itemize}
-            \item Xác suất > 90\%: Không cấp Voucher (Bảo vệ lợi nhuận).
-            \item Xác suất 70\%-90\%: Kích hoạt Pop-up Voucher 15 phút (Ép FOMO).
-            \item Xác suất < 50\%: Gợi ý đọc Blog để lấy Email.
-        \end{itemize}
-        \item \textbf{Real-time CS Intervention:} Bật cảnh báo cho nhân viên CSKH khi khách Nhãn 1 dừng ở trang Checkout quá 3 phút.
-        \item \textbf{Dynamic UI/UX:} Tự động ẩn banner, đưa nút thanh toán ra giữa màn hình với nhóm có ý định mua cao.
-    \end{enumerate}
-\end{frame}
-
-\begin{frame}{6.2 Rủi ro \& Hạn chế (Risks \& Limitations)}
-    \textbf{1. Rủi ro Kinh doanh:}
-    \begin{itemize}
-        \item Mặc dù Recall cao, Precision vẫn ở mức 27\% (Có False Positives). Khuyến nghị này \textbf{chỉ an toàn với Marketing chi phí thấp} (Email, Push). KHÔNG dùng cho Telesales/Voucher quá lớn.
-        \item Nguy cơ thao túng thuật toán (Voucher Abuse) $\rightarrow$ Cần Randomization và Rate Limiting.
-        \item \textbf{Bắt buộc:} Cần chạy \textbf{A/B Testing} trước khi Roll-out toàn bộ.
-    \end{itemize}
     
-    \textbf{2. Hạn chế Kỹ thuật:}
+    \textbf{Nhận xét sâu:}
     \begin{itemize}
-        \item Mô hình đang đánh giá rời rạc theo từng Phiên (Session), chưa nối được hành trình dài hạn (Cross-device/Long-term Journey).
-        \item Bỏ qua tính tuần tự (Sequential) của chuỗi Click chuột.
+        \item \textbf{Độ nhạy (Recall) 0.96:} Nhận diện trúng 96\% tổng số phiên có giao dịch. Không bỏ lọt cơ hội kinh doanh.
+        \item \textbf{Lift Score:} Precision 0.24 nghe có vẻ thấp, nhưng so với mức tự nhiên (3.1\%) thì hệ thống đã \textbf{Nâng chất lượng tệp khách lên 7.74 lần}.
+    \end{itemize}
+\end{frame}
+\begin{frame}{6.4 Kết quả Mô hình Gradient Boosting (LightGBM)}
+    \begin{columns}
+        \begin{column}{0.55\textwidth}
+            \textbf{Thiết lập siêu tham số (LightGBM):}
+            \begin{itemize}
+                \item \textbf{Số lượng cây:} 420 | \textbf{Tốc độ học:} 0.027
+                \item \textbf{Sâu tối đa:} 13 | \textbf{Nút lá tối đa:} 186
+                \item \textbf{Mẫu tối thiểu tại lá:} 205
+                \item \textbf{Lấy mẫu dữ liệu:} 0.88 | \textbf{Đặc trưng:} 0.79
+            \end{itemize}
+            
+            \vspace{0.5cm}
+            \textbf{Kết quả:}
+            \begin{itemize}
+                \item \textbf{Điểm ROC-AUC:} \textbf{0.9699}
+                \item \textbf{Ngưỡng quyết định tối ưu:} 0.525
+            \end{itemize}
+        \end{column}
+        
+        \begin{column}{0.45\textwidth}
+            \begin{center}
+                  \includegraphics[width=\textwidth]{IMG/ROC_Light.png}
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+\begin{frame}{6.5 Kết quả Mô hình Gradient Boosting (LightGBM)}
+    \begin{table}[H]
+        \centering
+        \caption{Báo cáo kết quả phân loại (LightGBM)}
+        \resizebox{0.7\textwidth}{!}{
+        \begin{tabular}{l cccc}
+            \toprule
+              \textbf{Nhóm / Chỉ số} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
+            \midrule
+            \textbf{0 (Không mua)} & 1.00 & 0.90 & 0.95 & 872,934 \\
+            \textbf{1 (Có mua)}    & 0.24 & \textbf{0.96} & \textbf{0.39} & 27,961 \\
+            \midrule
+            \textbf{Accuracy} & \multicolumn{2}{c}{} & 0.91 & 900,895 \\
+            \bottomrule
+        \end{tabular}
+        }
+    \end{table}
+
+    \textbf{Nhận xét tổng thể LightGBM (ROC-AUC: 0.9699):}
+    \begin{itemize}
+        \item Thu hồi 96\% khách có giao dịch $\rightarrow$ Bảo toàn doanh thu.
+        \item Đặc hiệu 90\% (Recall lớp 0) $\rightarrow$ Tự động loại bỏ 90\% khách "lướt dạo", tiết kiệm khổng lồ ngân sách quảng cáo.
+        \item Vượt qua hoàn toàn cạm bẫy thiên lệch đa số của bài toán.
+    \end{itemize}
+\end{frame}
+\begin{frame}{6.6 Tổng hợp và So sánh Hiệu suất các Mô hình}
+    \begin{table}[H]
+        \centering
+        \caption{Bảng tổng hợp các chỉ số đánh giá trên tập Kiểm thử (Tập trung vào Nhãn 1: Có mua hàng)}
+        \vspace{0.2cm}
+        \resizebox{0.95\textwidth}{!}{
+        \begin{tabular}{l ccccc}
+            \toprule
+            \textbf{Mô hình} & \textbf{ROC-AUC} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\
+            \midrule
+            \textbf{Logistic Regression} & 0.9215 & 0.83 & 0.14 & 0.85 & 0.24 \\
+            \textbf{Random Forest } & 0.9671 & 0.90 & \textbf{0.24} & \textbf{0.96} & 0.38 \\
+            \textbf{LightGBM } & \textbf{0.9699} & \textbf{0.91} & \textbf{0.24} & \textbf{0.96} & \textbf{0.39} \\
+            \bottomrule
+        \end{tabular}
+        }
+    \end{table}
+\end{frame}
+% ==========================================
+\section{7. Khuyến nghị và Hướng phát triển}
+% ==========================================
+
+\begin{frame}{7.1 Khuyến nghị Ra quyết định (Marketing \& Khuyến mãi)}
+    \textbf{1. Chuyển dịch sang Marketing mục tiêu:}
+    \begin{itemize}
+        \item Ngừng chạy Ads bám đuôi đại trà. 
+        \item Tập trung ngân sách vào tệp được AI gán \textbf{Nhãn 1}.
+        \item \textit{Hiệu quả:} Giảm mạnh CAC, tăng ROAS gấp nhiều lần do tệp khách hàng được tinh lọc.
+    \end{itemize}
+
+    \vspace{0.4cm}
+    \textbf{2. Phân phối Khuyến mãi Thông minh:}
+    \begin{itemize}
+        \item Khách chắc chắn mua (Xác suất $>90\%$): \textbf{Không cấp mã}.
+        \item Khách phân vân (Xác suất $70-90\%$): \textbf{Bật Pop-up Voucher 15 phút}.
+        \item Khách lướt dạo (Xác suất $<50\%$): \textbf{Gợi ý đọc Blog} để lấy Email.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{7.2 Khuyến nghị Ra quyết định (CSKH \& Giao diện)}
+    \textbf{3. Can thiệp Chăm sóc Khách hàng Thời gian thực:}
+    \begin{itemize}
+        \item Tích hợp mô hình vào Backend qua Apache Kafka.
+        \item Nếu AI phát hiện phiên có \textit{Xác suất cao + Dừng quá lâu ở Checkout}.
+        \item $\rightarrow$ Báo động cho CSKH vào Live-chat can thiệp ngay để cứu đơn hàng.
+    \end{itemize}
+
+    \vspace{0.4cm}
+    \textbf{4. Tối ưu Trải nghiệm (Dynamic UI/UX):}
+    \begin{itemize}
+        \item \textbf{Nhóm 0:} Giao diện Discovery (Khám phá) nhiều hình ảnh.
+        \item \textbf{Nhóm 1:} Giao diện Checkout. Ẩn quảng cáo rườm rà, đẩy nút \textbf{Thanh toán} ra giữa màn hình.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{7.3 Đánh giá Rủi ro và Hạn chế}
+    \textbf{Rủi ro Triển khai Kinh doanh:}
+    \begin{itemize}
+        \item \textbf{Thất thoát do False Positives:} Precision 24\% nghĩa là trong 100 người dự đoán mua, có 76 người không mua. \textbf{Tuyệt đối không} dùng mô hình này để tặng Voucher tiền mặt lớn hay gọi điện Telesales. Chỉ hợp với Email/Push Notification.
+        \item \textbf{Thao túng AI:} Khách hàng có thể cố tình giả vờ để ép AI nhả mã giảm giá. Cần giới hạn Rate Limiting.
+        \item \textbf{Bắt buộc:} Phải chạy \textbf{A/B Testing} trước khi đưa ra toàn hệ thống.
+    \end{itemize}
+
+    \vspace{0.3cm}
+    \textbf{Hạn chế của Kỹ thuật hiện tại:}
+    \begin{itemize}
+        \item Chỉ dự đoán trong 1 phiên duy nhất, chưa nối được chuỗi hành trình vắt chéo thiết bị (Cross-device).
+        \item Dữ liệu dạng đếm (count), đánh mất tính tuần tự (Time-series) của click.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{7.4 Hướng phát triển trong tương lai}
+    \textbf{Định hướng nâng cấp Hệ thống AI:}
+    \begin{itemize}
+        \item \textbf{Ứng dụng Học Sâu (Deep Learning):} Chuyển sang mô hình Dữ liệu chuỗi. Sử dụng \textbf{RNN, LSTM} hoặc \textbf{Transformer} để AI "hiểu" được tuần tự click chuột (Ví dụ: View $\rightarrow$ Cart sẽ khác với Cart $\rightarrow$ Remove).
+        \item \textbf{Hệ thống MLOps:} 
+        \begin{itemize}
+            \item Hứng dữ liệu Clickstream theo thời gian thực (Spark Streaming).
+            \item Huấn luyện liên tục (Continuous Training) để chống hiện tượng trôi dạt dữ liệu (Data Drift) do mùa vụ.
+        \end{itemize}
     \end{itemize}
 \end{frame}
 

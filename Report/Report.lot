@@ -1,8 +1,8 @@
 \babel@toc {vietnamese}{}\relax 
 \contentsline {table}{\numberline {1}{\ignorespaces Từ điển dữ liệu nguyên bản (Raw Event Logs)}}{8}{}%
-\contentsline {table}{\numberline {2}{\ignorespaces Các Metric của mô hình Hồi quy Logistic (Logistic Regression)}}{20}{}%
-\contentsline {table}{\numberline {3}{\ignorespaces Các Metric của mô hình cây quyết định}}{20}{}%
-\contentsline {table}{\numberline {4}{\ignorespaces Các Metric của mô hình lightGBM}}{21}{}%
-\contentsline {table}{\numberline {5}{\ignorespaces Metric của mô hình Ensemble cây quyết định (Random Forest + Bagging)}}{21}{}%
-\contentsline {table}{\numberline {6}{\ignorespaces Mô hình lightGBM sau khi xử lý mất cân bằng}}{21}{}%
-\contentsline {table}{\numberline {7}{\ignorespaces Bảng phân công công việc của các thành viên trong nhóm}}{27}{}%
+\contentsline {table}{\numberline {2}{\ignorespaces 5 dòng dữ liệu sau trích xuất }}{13}{}%
+\contentsline {table}{\numberline {3}{\ignorespaces Báo cáo kết quả phân loại}}{27}{}%
+\contentsline {table}{\numberline {4}{\ignorespaces Báo cáo kết quả phân loại}}{28}{}%
+\contentsline {table}{\numberline {5}{\ignorespaces Báo cáo kết quả phân loại}}{30}{}%
+\contentsline {table}{\numberline {6}{\ignorespaces Bảng tổng hợp so sánh hiệu suất giữa các mô hình (Chọn ngưỡng tối ưu Recall)}}{31}{}%
+\contentsline {table}{\numberline {7}{\ignorespaces Bảng phân công công việc của các thành viên trong nhóm}}{36}{}%

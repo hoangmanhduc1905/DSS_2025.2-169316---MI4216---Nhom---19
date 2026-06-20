@@ -347,6 +347,8 @@ INPUT C:\Program Files\MiKTeX\tex\latex\ifoddpage\ifoddpage.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\varwidth\varwidth.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\varwidth\varwidth.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\varwidth\varwidth.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\float\float.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\beamer\beamerthemeMadrid.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\beamer\beamerthemeMadrid.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\beamer\beamercolorthemewhale.sty
@@ -419,7 +421,6 @@ INPUT C:\Program Files\MiKTeX\tex\latex\lm\ot1lmss.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\ot1lmss.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\ot1lmss.fd
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmss10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\t5-lmssbx10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmss8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmss8.tfm
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\omllmm.fd
@@ -453,6 +454,9 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\t5-lmsso10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\t5-lmsso8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\t5-lmsso8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\t5-lmssbx10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
+INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\t5lmtt.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\t5lmtt.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\t5lmtt.fd
@@ -471,7 +475,6 @@ INPUT .\IMG\NullCheck.png
 INPUT .\IMG\NullCheck.png
 INPUT .\IMG\NullCheck.png
 INPUT .\IMG\NullCheck.png
-INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
 INPUT .\IMG\DupCheck.png
 INPUT .\IMG\DupCheck.png
 INPUT .\IMG\DupCheck.png
@@ -486,7 +489,6 @@ INPUT .\IMG\Describe.png
 INPUT .\IMG\Describe.png
 INPUT .\IMG\Describe.png
 INPUT .\IMG\Describe.png
-INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
 INPUT .\IMG\ETL1.png
 INPUT .\IMG\ETL1.png
 INPUT .\IMG\ETL1.png
@@ -494,50 +496,6 @@ INPUT .\IMG\ETL1.png
 INPUT .\IMG\ETL1.png
 INPUT .\IMG\ETL1.png
 INPUT .\IMG\ETL1.png
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\t5-lmtk10.tfm
-INPUT .\IMG\ETL2.png
-INPUT .\IMG\ETL2.png
-INPUT .\IMG\ETL2.png
-INPUT .\IMG\ETL2.png
-INPUT .\IMG\ETL2.png
-INPUT .\IMG\ETL2.png
-INPUT .\IMG\ETL2.png
-INPUT .\IMG\ETL3.png
-INPUT .\IMG\ETL3.png
-INPUT .\IMG\ETL3.png
-INPUT .\IMG\ETL3.png
-INPUT .\IMG\ETL3.png
-INPUT .\IMG\ETL3.png
-INPUT .\IMG\ETL3.png
-INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
-INPUT .\IMG\phanbonhan.png
-INPUT .\IMG\phanbonhan.png
-INPUT .\IMG\phanbonhan.png
-INPUT .\IMG\phanbonhan.png
-INPUT .\IMG\phanbonhan.png
-INPUT .\IMG\phanbonhan.png
-INPUT .\IMG\phanbonhan.png
-INPUT .\IMG\feature_distributions.png
-INPUT .\IMG\feature_distributions.png
-INPUT .\IMG\feature_distributions.png
-INPUT .\IMG\feature_distributions.png
-INPUT .\IMG\feature_distributions.png
-INPUT .\IMG\feature_distributions.png
-INPUT .\IMG\feature_distributions.png
-INPUT .\IMG\Corr.png
-INPUT .\IMG\Corr.png
-INPUT .\IMG\Corr.png
-INPUT .\IMG\Corr.png
-INPUT .\IMG\Corr.png
-INPUT .\IMG\Corr.png
-INPUT .\IMG\Corr.png
-INPUT .\IMG\cayquyetdinh.png
-INPUT .\IMG\cayquyetdinh.png
-INPUT .\IMG\cayquyetdinh.png
-INPUT .\IMG\cayquyetdinh.png
-INPUT .\IMG\cayquyetdinh.png
-INPUT .\IMG\cayquyetdinh.png
-INPUT .\IMG\cayquyetdinh.png
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\t5-lmss10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmss10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmss8.tfm
@@ -560,6 +518,112 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\t5-lmsso10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\t5-lmsso8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\t5-lmsso8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\t5-lmssbx10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
+INPUT .\IMG\phanbonhan.png
+INPUT .\IMG\phanbonhan.png
+INPUT .\IMG\phanbonhan.png
+INPUT .\IMG\phanbonhan.png
+INPUT .\IMG\phanbonhan.png
+INPUT .\IMG\phanbonhan.png
+INPUT .\IMG\phanbonhan.png
+INPUT .\IMG\totalview.png
+INPUT .\IMG\totalview.png
+INPUT .\IMG\totalview.png
+INPUT .\IMG\totalview.png
+INPUT .\IMG\totalview.png
+INPUT .\IMG\totalview.png
+INPUT .\IMG\totalview.png
+INPUT .\IMG\session.png
+INPUT .\IMG\session.png
+INPUT .\IMG\session.png
+INPUT .\IMG\session.png
+INPUT .\IMG\session.png
+INPUT .\IMG\session.png
+INPUT .\IMG\session.png
+INPUT .\IMG\totalcart.png
+INPUT .\IMG\totalcart.png
+INPUT .\IMG\totalcart.png
+INPUT .\IMG\totalcart.png
+INPUT .\IMG\totalcart.png
+INPUT .\IMG\totalcart.png
+INPUT .\IMG\totalcart.png
+INPUT .\IMG\totalreview.png
+INPUT .\IMG\totalreview.png
+INPUT .\IMG\totalreview.png
+INPUT .\IMG\totalreview.png
+INPUT .\IMG\totalreview.png
+INPUT .\IMG\totalreview.png
+INPUT .\IMG\totalreview.png
+INPUT .\IMG\RScore.png
+INPUT .\IMG\RScore.png
+INPUT .\IMG\RScore.png
+INPUT .\IMG\RScore.png
+INPUT .\IMG\RScore.png
+INPUT .\IMG\RScore.png
+INPUT .\IMG\RScore.png
+INPUT .\IMG\FScore.png
+INPUT .\IMG\FScore.png
+INPUT .\IMG\FScore.png
+INPUT .\IMG\FScore.png
+INPUT .\IMG\FScore.png
+INPUT .\IMG\FScore.png
+INPUT .\IMG\FScore.png
+INPUT .\IMG\MScore.png
+INPUT .\IMG\MScore.png
+INPUT .\IMG\MScore.png
+INPUT .\IMG\MScore.png
+INPUT .\IMG\MScore.png
+INPUT .\IMG\MScore.png
+INPUT .\IMG\MScore.png
+INPUT .\IMG\RFM.png
+INPUT .\IMG\RFM.png
+INPUT .\IMG\RFM.png
+INPUT .\IMG\RFM.png
+INPUT .\IMG\RFM.png
+INPUT .\IMG\RFM.png
+INPUT .\IMG\RFM.png
+INPUT .\IMG\Hour.png
+INPUT .\IMG\Hour.png
+INPUT .\IMG\Hour.png
+INPUT .\IMG\Hour.png
+INPUT .\IMG\Hour.png
+INPUT .\IMG\Hour.png
+INPUT .\IMG\Hour.png
+INPUT .\IMG\Day.png
+INPUT .\IMG\Day.png
+INPUT .\IMG\Day.png
+INPUT .\IMG\Day.png
+INPUT .\IMG\Day.png
+INPUT .\IMG\Day.png
+INPUT .\IMG\Day.png
+INPUT .\IMG\Corr.png
+INPUT .\IMG\Corr.png
+INPUT .\IMG\Corr.png
+INPUT .\IMG\Corr.png
+INPUT .\IMG\Corr.png
+INPUT .\IMG\Corr.png
+INPUT .\IMG\Corr.png
+INPUT .\IMG\ROC.png
+INPUT .\IMG\ROC.png
+INPUT .\IMG\ROC.png
+INPUT .\IMG\ROC.png
+INPUT .\IMG\ROC.png
+INPUT .\IMG\ROC.png
+INPUT .\IMG\ROC.png
+INPUT .\IMG\ROC_RF.png
+INPUT .\IMG\ROC_RF.png
+INPUT .\IMG\ROC_RF.png
+INPUT .\IMG\ROC_RF.png
+INPUT .\IMG\ROC_RF.png
+INPUT .\IMG\ROC_RF.png
+INPUT .\IMG\ROC_RF.png
+INPUT .\IMG\ROC_Light.png
+INPUT .\IMG\ROC_Light.png
+INPUT .\IMG\ROC_Light.png
+INPUT .\IMG\ROC_Light.png
+INPUT .\IMG\ROC_Light.png
+INPUT .\IMG\ROC_Light.png
+INPUT .\IMG\ROC_Light.png
 OUTPUT Slide.nav
 OUTPUT Slide.toc
 OUTPUT Slide.snm
@@ -582,7 +646,5 @@ INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsso8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsso8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsy10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsy10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtk10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtk10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt10.pfb

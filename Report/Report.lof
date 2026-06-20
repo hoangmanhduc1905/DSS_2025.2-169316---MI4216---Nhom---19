@@ -4,9 +4,22 @@
 \contentsline {figure}{\numberline {3}{\ignorespaces Kiểm tra trùng lặp bằng Python}}{10}{}%
 \contentsline {figure}{\numberline {4}{\ignorespaces Kiểm tra thống kê dữ liệu}}{10}{}%
 \contentsline {figure}{\numberline {5}{\ignorespaces Làm sạch dữ liệu thô}}{11}{}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Xử lý khuyết dữ liệu và cột không đóng góp}}{12}{}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Dữ liệu sau khi tổng hợp đặc trưng}}{13}{}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Phân bố hai nhãn}}{14}{}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Biểu đồ phân bố các biến trong dữ liệu của mô hình}}{15}{}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Hệ số tương quan giữa các biến}}{17}{}%
-\contentsline {figure}{\numberline {11}{\ignorespaces 3 tầng đầu cây quyết định}}{20}{}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Phân bố hai nhãn}}{14}{}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Biểu đồ phân đặc trưng total view}}{14}{}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Biểu đồ phân đặc trưng total cart}}{15}{}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Biểu đồ phân đặc trưng total remove}}{15}{}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Biểu đồ phân đặc trưng avg price}}{16}{}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Biểu đồ phân đặc trưng unique brand}}{16}{}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Biểu đồ phân đặc trưng unique product}}{17}{}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Biểu đồ phân đặc trưng session duration}}{17}{}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Biểu đồ phân đặc trưng max price}}{18}{}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Biểu đồ so sánh R Score}}{19}{}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Biểu đồ so sánh F Score}}{19}{}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Biểu đồ so sánh M Score}}{20}{}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Biểu đồ so sánh RFM Score}}{20}{}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Biểu đồ tỷ lệ mua hàng theo giờ}}{21}{}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Biểu đồ tỷ lệ mua hàng ngày trong tuần}}{21}{}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Hệ số tương quan giữa các biến}}{23}{}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Biểu đồ ROC}}{26}{}%
+\contentsline {figure}{\numberline {23}{\ignorespaces ROC của mô hình Random Forest}}{27}{}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Đồ thị ROC của LightGBM}}{30}{}%

@@ -170,20 +170,6 @@ INPUT .\IMG\ETL1.png
 INPUT .\IMG\ETL1.png
 INPUT .\IMG\ETL1.png
 INPUT .\IMG\ETL1.png
-INPUT .\IMG\ETL2.png
-INPUT .\IMG\ETL2.png
-INPUT .\IMG\ETL2.png
-INPUT .\IMG\ETL2.png
-INPUT .\IMG\ETL2.png
-INPUT .\IMG\ETL2.png
-INPUT .\IMG\ETL2.png
-INPUT .\IMG\ETL3.png
-INPUT .\IMG\ETL3.png
-INPUT .\IMG\ETL3.png
-INPUT .\IMG\ETL3.png
-INPUT .\IMG\ETL3.png
-INPUT .\IMG\ETL3.png
-INPUT .\IMG\ETL3.png
 INPUT .\IMG\phanbonhan.png
 INPUT .\IMG\phanbonhan.png
 INPUT .\IMG\phanbonhan.png
@@ -191,13 +177,104 @@ INPUT .\IMG\phanbonhan.png
 INPUT .\IMG\phanbonhan.png
 INPUT .\IMG\phanbonhan.png
 INPUT .\IMG\phanbonhan.png
-INPUT .\IMG\feature_distributions.png
-INPUT .\IMG\feature_distributions.png
-INPUT .\IMG\feature_distributions.png
-INPUT .\IMG\feature_distributions.png
-INPUT .\IMG\feature_distributions.png
-INPUT .\IMG\feature_distributions.png
-INPUT .\IMG\feature_distributions.png
+INPUT .\IMG\totalview.png
+INPUT .\IMG\totalview.png
+INPUT .\IMG\totalview.png
+INPUT .\IMG\totalview.png
+INPUT .\IMG\totalview.png
+INPUT .\IMG\totalview.png
+INPUT .\IMG\totalview.png
+INPUT .\IMG\totalcart.png
+INPUT .\IMG\totalcart.png
+INPUT .\IMG\totalcart.png
+INPUT .\IMG\totalcart.png
+INPUT .\IMG\totalcart.png
+INPUT .\IMG\totalcart.png
+INPUT .\IMG\totalcart.png
+INPUT .\IMG\totalreview.png
+INPUT .\IMG\totalreview.png
+INPUT .\IMG\totalreview.png
+INPUT .\IMG\totalreview.png
+INPUT .\IMG\totalreview.png
+INPUT .\IMG\totalreview.png
+INPUT .\IMG\totalreview.png
+INPUT .\IMG\avgprice.png
+INPUT .\IMG\avgprice.png
+INPUT .\IMG\avgprice.png
+INPUT .\IMG\avgprice.png
+INPUT .\IMG\avgprice.png
+INPUT .\IMG\avgprice.png
+INPUT .\IMG\avgprice.png
+INPUT .\IMG\uniquebrand.png
+INPUT .\IMG\uniquebrand.png
+INPUT .\IMG\uniquebrand.png
+INPUT .\IMG\uniquebrand.png
+INPUT .\IMG\uniquebrand.png
+INPUT .\IMG\uniquebrand.png
+INPUT .\IMG\uniquebrand.png
+INPUT .\IMG\uniqueproduct.png
+INPUT .\IMG\uniqueproduct.png
+INPUT .\IMG\uniqueproduct.png
+INPUT .\IMG\uniqueproduct.png
+INPUT .\IMG\uniqueproduct.png
+INPUT .\IMG\uniqueproduct.png
+INPUT .\IMG\uniqueproduct.png
+INPUT .\IMG\session.png
+INPUT .\IMG\session.png
+INPUT .\IMG\session.png
+INPUT .\IMG\session.png
+INPUT .\IMG\session.png
+INPUT .\IMG\session.png
+INPUT .\IMG\session.png
+INPUT .\IMG\maxprice.png
+INPUT .\IMG\maxprice.png
+INPUT .\IMG\maxprice.png
+INPUT .\IMG\maxprice.png
+INPUT .\IMG\maxprice.png
+INPUT .\IMG\maxprice.png
+INPUT .\IMG\maxprice.png
+INPUT .\IMG\RScore.png
+INPUT .\IMG\RScore.png
+INPUT .\IMG\RScore.png
+INPUT .\IMG\RScore.png
+INPUT .\IMG\RScore.png
+INPUT .\IMG\RScore.png
+INPUT .\IMG\RScore.png
+INPUT .\IMG\FScore.png
+INPUT .\IMG\FScore.png
+INPUT .\IMG\FScore.png
+INPUT .\IMG\FScore.png
+INPUT .\IMG\FScore.png
+INPUT .\IMG\FScore.png
+INPUT .\IMG\FScore.png
+INPUT .\IMG\MScore.png
+INPUT .\IMG\MScore.png
+INPUT .\IMG\MScore.png
+INPUT .\IMG\MScore.png
+INPUT .\IMG\MScore.png
+INPUT .\IMG\MScore.png
+INPUT .\IMG\MScore.png
+INPUT .\IMG\RFM.png
+INPUT .\IMG\RFM.png
+INPUT .\IMG\RFM.png
+INPUT .\IMG\RFM.png
+INPUT .\IMG\RFM.png
+INPUT .\IMG\RFM.png
+INPUT .\IMG\RFM.png
+INPUT .\IMG\Hour.png
+INPUT .\IMG\Hour.png
+INPUT .\IMG\Hour.png
+INPUT .\IMG\Hour.png
+INPUT .\IMG\Hour.png
+INPUT .\IMG\Hour.png
+INPUT .\IMG\Hour.png
+INPUT .\IMG\Day.png
+INPUT .\IMG\Day.png
+INPUT .\IMG\Day.png
+INPUT .\IMG\Day.png
+INPUT .\IMG\Day.png
+INPUT .\IMG\Day.png
+INPUT .\IMG\Day.png
 INPUT .\IMG\Corr.png
 INPUT .\IMG\Corr.png
 INPUT .\IMG\Corr.png
@@ -205,13 +282,34 @@ INPUT .\IMG\Corr.png
 INPUT .\IMG\Corr.png
 INPUT .\IMG\Corr.png
 INPUT .\IMG\Corr.png
-INPUT .\IMG\cayquyetdinh.png
-INPUT .\IMG\cayquyetdinh.png
-INPUT .\IMG\cayquyetdinh.png
-INPUT .\IMG\cayquyetdinh.png
-INPUT .\IMG\cayquyetdinh.png
-INPUT .\IMG\cayquyetdinh.png
-INPUT .\IMG\cayquyetdinh.png
+INPUT C:\Program Files\MiKTeX\fonts\tfm\vntex\vnr\vnr8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\vntex\vnr\vnbx8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\vntex\vnr\vnr6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\vntex\vnr\vnbx6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx6.tfm
+INPUT .\IMG\ROC.png
+INPUT .\IMG\ROC.png
+INPUT .\IMG\ROC.png
+INPUT .\IMG\ROC.png
+INPUT .\IMG\ROC.png
+INPUT .\IMG\ROC.png
+INPUT .\IMG\ROC.png
+INPUT .\IMG\ROC_RF.png
+INPUT .\IMG\ROC_RF.png
+INPUT .\IMG\ROC_RF.png
+INPUT .\IMG\ROC_RF.png
+INPUT .\IMG\ROC_RF.png
+INPUT .\IMG\ROC_RF.png
+INPUT .\IMG\ROC_RF.png
+INPUT .\IMG\ROC_Light.png
+INPUT .\IMG\ROC_Light.png
+INPUT .\IMG\ROC_Light.png
+INPUT .\IMG\ROC_Light.png
+INPUT .\IMG\ROC_Light.png
+INPUT .\IMG\ROC_Light.png
+INPUT .\IMG\ROC_Light.png
 INPUT Report.aux
 INPUT C:\Users\hoang\AppData\Local\MiKTeX\fonts\pk\ljfour\vntex\vnr\dpi657\vntt10.pk
 INPUT C:\Users\hoang\AppData\Local\MiKTeX\fonts\pk\ljfour\vntex\vnr\dpi657\vntt10.pk
@@ -233,9 +331,21 @@ INPUT C:\Users\hoang\AppData\Local\MiKTeX\fonts\pk\ljfour\vntex\vnr\dpi1244\vnbx
 INPUT C:\Users\hoang\AppData\Local\MiKTeX\fonts\pk\ljfour\vntex\vnr\dpi1244\vnbx12.pk
 INPUT C:\Users\hoang\AppData\Local\MiKTeX\fonts\pk\ljfour\vntex\vnr\dpi720\vnbx12.pk
 INPUT C:\Users\hoang\AppData\Local\MiKTeX\fonts\pk\ljfour\vntex\vnr\dpi720\vnbx12.pk
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb

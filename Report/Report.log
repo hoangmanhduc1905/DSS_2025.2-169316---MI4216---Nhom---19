@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.11.16)  17 JUN 2026 22:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.11.16)  20 JUN 2026 18:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -408,12 +408,7 @@ Package pdftex.def Info: IMG/HUSTLOGO.png  used on input line 21.
 (pdftex.def)             Requested size: 71.9989pt x 107.98207pt.
  [1
 
-{C:/Users/hoang/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./IMG/HUSTLOGO.png>] (Report.toc
-Overfull \hbox (0.83525pt too wide) in paragraph at lines 7--7
- [][] []\T5/cmr/m/n/10.95 Quy¸t ^^_ành ph¥n bê ng¥n s¡ch khuy¸n m¢i (Voucher/Discount 
- []
-
-[1])
+{C:/Users/hoang/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./IMG/HUSTLOGO.png>] (Report.toc [1])
 \tf@toc=\write3
 \openout3 = `Report.toc'.
 
@@ -425,12 +420,7 @@ Overfull \hbox (0.83525pt too wide) in paragraph at lines 7--7
 \tf@lot=\write5
 \openout5 = `Report.lot'.
 
- [4] [5]
-Overfull \hbox (29.60338pt too wide) in paragraph at lines 86--86
-[]\T5/cmr/bx/n/12 Quy¸t ^^_ành ph¥n bê ng¥n s¡ch khuy¸n m¢i (Voucher/Discount
- []
-
-[6] (C:\Program Files\MiKTeX\tex/latex/vntex\t5cmtt.fd)
+ [4] [5] [6] (C:\Program Files\MiKTeX\tex/latex/vntex\t5cmtt.fd)
 <IMG/Datavalid1.png, id=36, 855.79726pt x 292.6935pt>
 File: IMG/Datavalid1.png Graphic file (type png)
 <use IMG/Datavalid1.png>
@@ -456,156 +446,249 @@ Package pdftex.def Info: IMG/Describe.png  used on input line 165.
 <IMG/ETL1.png, id=52, 425.79076pt x 473.97075pt>
 File: IMG/ETL1.png Graphic file (type png)
 <use IMG/ETL1.png>
-Package pdftex.def Info: IMG/ETL1.png  used on input line 178.
+Package pdftex.def Info: IMG/ETL1.png  used on input line 175.
 (pdftex.def)             Requested size: 288.0011pt x 320.58904pt.
- [10 <./IMG/DupCheck.png> <./IMG/Describe.png>]
-<IMG/ETL2.png, id=61, 527.571pt x 475.7775pt>
-File: IMG/ETL2.png Graphic file (type png)
-<use IMG/ETL2.png>
-Package pdftex.def Info: IMG/ETL2.png  used on input line 185.
-(pdftex.def)             Requested size: 288.0011pt x 259.72554pt.
- [11 <./IMG/ETL1.png>]
-Overfull \hbox (5.07478pt too wide) in paragraph at lines 194--195
+ [10 <./IMG/DupCheck.png> <./IMG/Describe.png>] [11 <./IMG/ETL1.png>]
+Overfull \hbox (5.07478pt too wide) in paragraph at lines 197--198
 []\T5/cmr/bx/n/10.95 T¡ch bi»t dú li»u (Ng«n ch°n Leak-age): \T5/cmr/m/n/10.95 To n bë c¡c sü ki»n \T5/cmtt/m/n/10.95 purchase
  []
 
-[12 <./IMG/ETL2.png>]
-<IMG/ETL3.png, id=71, 522.15076pt x 239.09325pt>
-File: IMG/ETL3.png Graphic file (type png)
-<use IMG/ETL3.png>
-Package pdftex.def Info: IMG/ETL3.png  used on input line 203.
-(pdftex.def)             Requested size: 288.0011pt x 131.8811pt.
-<IMG/phanbonhan.png, id=72, 570.933pt x 426.393pt>
-File: IMG/phanbonhan.png Graphic file (type png)
-<use IMG/phanbonhan.png>
-Package pdftex.def Info: IMG/phanbonhan.png  used on input line 216.
-(pdftex.def)             Requested size: 288.0011pt x 215.09578pt.
- [13 <./IMG/ETL3.png>]
-<IMG/feature_distributions.png, id=77, 1144.7568pt x 1144.0341pt>
-File: IMG/feature_distributions.png Graphic file (type png)
-<use IMG/feature_distributions.png>
-Package pdftex.def Info: IMG/feature_distributions.png  used on input line 224.
-(pdftex.def)             Requested size: 431.9989pt x 431.7175pt.
 
-Overfull \hbox (71.9989pt too wide) in paragraph at lines 224--225
+Overfull \hbox (1.28558pt too wide) in paragraph at lines 200--201
+[]\T5/cmr/m/it/10.95 ^^^°c tr÷ng Thíi gian: \T5/cmtt/m/n/10.95 day_of_week \T5/cmr/m/n/10.95 (thù trong tu¦n) v  \T5/cmtt/m/n/10.95 hour_of_day
+ []
+
+
+Overfull \hbox (90.31694pt too wide) in paragraph at lines 210--221
  [][] 
  []
 
-[14 <./IMG/phanbonhan.png>] [15 <./IMG/feature_distributions.png>]
-<IMG/Corr.png, id=86, 680.0607pt x 565.8741pt>
-File: IMG/Corr.png Graphic file (type png)
-<use IMG/Corr.png>
-Package pdftex.def Info: IMG/Corr.png  used on input line 247.
-(pdftex.def)             Requested size: 360.0pt x 299.55782pt.
- [16] [17 <./IMG/Corr.png>] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 290--291
 
+Overfull \hbox (69.54845pt too wide) in paragraph at lines 224--235
+ [][] 
  []
 
-[19]
-<IMG/cayquyetdinh.png, id=101, 1189.5642pt x 590.4459pt>
-File: IMG/cayquyetdinh.png Graphic file (type png)
-<use IMG/cayquyetdinh.png>
-Package pdftex.def Info: IMG/cayquyetdinh.png  used on input line 334.
-(pdftex.def)             Requested size: 288.0011pt x 142.95322pt.
- [20 <./IMG/cayquyetdinh.png>] [21] [22] [23] [24] [25] [26]
-Underfull \hbox (badness 10000) in paragraph at lines 505--505
+[12]
+<IMG/phanbonhan.png, id=71, 566.5968pt x 422.0568pt>
+File: IMG/phanbonhan.png Graphic file (type png)
+<use IMG/phanbonhan.png>
+Package pdftex.def Info: IMG/phanbonhan.png  used on input line 245.
+(pdftex.def)             Requested size: 288.0011pt x 214.53127pt.
+ [13]
+<IMG/totalview.png, id=75, 566.5968pt x 349.7868pt>
+File: IMG/totalview.png Graphic file (type png)
+<use IMG/totalview.png>
+Package pdftex.def Info: IMG/totalview.png  used on input line 253.
+(pdftex.def)             Requested size: 288.0011pt x 177.79646pt.
+<IMG/totalcart.png, id=76, 566.5968pt x 349.7868pt>
+File: IMG/totalcart.png Graphic file (type png)
+<use IMG/totalcart.png>
+Package pdftex.def Info: IMG/totalcart.png  used on input line 258.
+(pdftex.def)             Requested size: 288.0011pt x 177.79646pt.
+<IMG/totalreview.png, id=77, 566.5968pt x 349.7868pt>
+File: IMG/totalreview.png Graphic file (type png)
+<use IMG/totalreview.png>
+Package pdftex.def Info: IMG/totalreview.png  used on input line 263.
+(pdftex.def)             Requested size: 288.0011pt x 177.79646pt.
+ [14 <./IMG/phanbonhan.png> <./IMG/totalview.png>]
+<IMG/avgprice.png, id=83, 566.5968pt x 349.7868pt>
+File: IMG/avgprice.png Graphic file (type png)
+<use IMG/avgprice.png>
+Package pdftex.def Info: IMG/avgprice.png  used on input line 268.
+(pdftex.def)             Requested size: 288.0011pt x 177.79646pt.
+<IMG/uniquebrand.png, id=84, 566.5968pt x 349.7868pt>
+File: IMG/uniquebrand.png Graphic file (type png)
+<use IMG/uniquebrand.png>
+Package pdftex.def Info: IMG/uniquebrand.png  used on input line 273.
+(pdftex.def)             Requested size: 288.0011pt x 177.79646pt.
+ [15 <./IMG/totalcart.png> <./IMG/totalreview.png>]
+<IMG/uniqueproduct.png, id=90, 566.5968pt x 349.7868pt>
+File: IMG/uniqueproduct.png Graphic file (type png)
+<use IMG/uniqueproduct.png>
+Package pdftex.def Info: IMG/uniqueproduct.png  used on input line 278.
+(pdftex.def)             Requested size: 288.0011pt x 177.79646pt.
+<IMG/session.png, id=91, 566.5968pt x 349.7868pt>
+File: IMG/session.png Graphic file (type png)
+<use IMG/session.png>
+Package pdftex.def Info: IMG/session.png  used on input line 283.
+(pdftex.def)             Requested size: 288.0011pt x 177.79646pt.
+ [16 <./IMG/avgprice.png> <./IMG/uniquebrand.png>]
+<IMG/maxprice.png, id=97, 566.5968pt x 349.7868pt>
+File: IMG/maxprice.png Graphic file (type png)
+<use IMG/maxprice.png>
+Package pdftex.def Info: IMG/maxprice.png  used on input line 288.
+(pdftex.def)             Requested size: 288.0011pt x 177.79646pt.
+ [17 <./IMG/uniqueproduct.png> <./IMG/session.png>] [18 <./IMG/maxprice.png>]
+<IMG/RScore.png, id=108, 566.5968pt x 349.7868pt>
+File: IMG/RScore.png Graphic file (type png)
+<use IMG/RScore.png>
+Package pdftex.def Info: IMG/RScore.png  used on input line 309.
+(pdftex.def)             Requested size: 288.0011pt x 177.79646pt.
+<IMG/FScore.png, id=109, 566.5968pt x 349.7868pt>
+File: IMG/FScore.png Graphic file (type png)
+<use IMG/FScore.png>
+Package pdftex.def Info: IMG/FScore.png  used on input line 314.
+(pdftex.def)             Requested size: 288.0011pt x 177.79646pt.
+<IMG/MScore.png, id=110, 566.5968pt x 349.7868pt>
+File: IMG/MScore.png Graphic file (type png)
+<use IMG/MScore.png>
+Package pdftex.def Info: IMG/MScore.png  used on input line 319.
+(pdftex.def)             Requested size: 288.0011pt x 177.79646pt.
+<IMG/RFM.png, id=111, 566.5968pt x 349.7868pt>
+File: IMG/RFM.png Graphic file (type png)
+<use IMG/RFM.png>
+Package pdftex.def Info: IMG/RFM.png  used on input line 324.
+(pdftex.def)             Requested size: 288.0011pt x 177.79646pt.
+ [19 <./IMG/RScore.png> <./IMG/FScore.png>] [20 <./IMG/MScore.png> <./IMG/RFM.png>]
+<IMG/Hour.png, id=122, 708.9687pt x 349.7868pt>
+File: IMG/Hour.png Graphic file (type png)
+<use IMG/Hour.png>
+Package pdftex.def Info: IMG/Hour.png  used on input line 337.
+(pdftex.def)             Requested size: 288.0011pt x 142.0952pt.
+<IMG/Day.png, id=123, 711.1368pt x 349.7868pt>
+File: IMG/Day.png Graphic file (type png)
+<use IMG/Day.png>
+Package pdftex.def Info: IMG/Day.png  used on input line 342.
+(pdftex.def)             Requested size: 288.0011pt x 141.65753pt.
+LaTeX Font Info:    Font shape `T5/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `T5/cmtt/m/n' tried instead on input line 347.
+ [21 <./IMG/Hour.png> <./IMG/Day.png>]
+<IMG/Corr.png, id=129, 681.5061pt x 566.5968pt>
+File: IMG/Corr.png Graphic file (type png)
+<use IMG/Corr.png>
+Package pdftex.def Info: IMG/Corr.png  used on input line 357.
+(pdftex.def)             Requested size: 360.0pt x 299.30063pt.
+ [22]
+Overfull \hbox (10.06201pt too wide) in paragraph at lines 363--364
+\T5/cmr/m/n/10.95 mang thæng tin chçng ch²o lîn. ^^^iºn h¼nh l  nhâm ch¿ sè RFM (\T5/cmtt/m/n/10.95 R_Score,
+ []
+
+
+Overfull \hbox (12.50006pt too wide) in paragraph at lines 367--368
+[]\T5/cmr/bx/n/10.95 ^^^°c t½nh phi tuy¸n cõa b i to¡n : \T5/cmr/m/n/10.95 So vîi bi¸n möc ti¶u \T5/cmtt/m/n/10.95 is_purchased\T5/cmr/m/n/10.95 ,
+ []
+
+
+Overfull \hbox (30.46526pt too wide) in paragraph at lines 367--368
+\T5/cmr/m/n/10.95 tuy¸n t½nh y¸u ^^_¸n trung b¼nh y¸u (h» sè cao nh§t l  $\OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 26$ \T5/cmr/m/n/10.95 t¤i \T5/cmtt/m/n/10.95 unique_brands\T5/cmr/m/n/10.95 ).
+ []
+
+[23 <./IMG/Corr.png>] [24] [25]
+<IMG/ROC.png, id=148, 570.933pt x 426.393pt>
+File: IMG/ROC.png Graphic file (type png)
+<use IMG/ROC.png>
+Package pdftex.def Info: IMG/ROC.png  used on input line 435.
+(pdftex.def)             Requested size: 288.0011pt x 215.09578pt.
+ [26 <./IMG/ROC.png>]
+<IMG/ROC_RF.png, id=153, 570.2103pt x 426.393pt>
+File: IMG/ROC_RF.png Graphic file (type png)
+<use IMG/ROC_RF.png>
+Package pdftex.def Info: IMG/ROC_RF.png  used on input line 461.
+(pdftex.def)             Requested size: 288.0011pt x 215.36905pt.
+ [27 <./IMG/ROC_RF.png>] [28]
+<IMG/ROC_Light.png, id=161, 570.2103pt x 426.393pt>
+File: IMG/ROC_Light.png Graphic file (type png)
+<use IMG/ROC_Light.png>
+Package pdftex.def Info: IMG/ROC_Light.png  used on input line 531.
+(pdftex.def)             Requested size: 288.0011pt x 215.36905pt.
+ [29] [30 <./IMG/ROC_Light.png>] [31] [32] [33] [34]
+Underfull \hbox (badness 10000) in paragraph at lines 675--675
 []|\T5/cmr/bx/n/10.95 Cæng
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 505--505
+Underfull \hbox (badness 10000) in paragraph at lines 675--675
 \T5/cmr/bx/n/10.95 vi»c
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 505--505
+Underfull \hbox (badness 10000) in paragraph at lines 675--675
 []|\T5/cmr/bx/n/10.95 Minh
  []
 
 
-Underfull \hbox (badness 1454) in paragraph at lines 505--505
+Underfull \hbox (badness 1454) in paragraph at lines 675--675
 []|\T5/cmr/m/n/10.95 T¼m hiºu
  []
 
 
-Underfull \hbox (badness 3000) in paragraph at lines 505--505
+Underfull \hbox (badness 3000) in paragraph at lines 675--675
 \T5/cmr/m/n/10.95 b i to¡n,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 505--505
+Underfull \hbox (badness 10000) in paragraph at lines 675--675
 \T5/cmr/m/n/10.95 mæ t£
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 505--505
+Underfull \hbox (badness 10000) in paragraph at lines 675--675
 \T5/cmr/m/n/10.95 dú li»u,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 505--505
+Underfull \hbox (badness 10000) in paragraph at lines 675--675
 \T5/cmr/m/n/10.95 vi¸t b¡o
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 505--505
+Underfull \hbox (badness 10000) in paragraph at lines 675--675
 \T5/cmr/m/n/10.95 c¡o, x¥y
  []
 
 
-Underfull \hbox (badness 4072) in paragraph at lines 505--505
+Underfull \hbox (badness 4072) in paragraph at lines 675--675
 \T5/cmr/m/n/10.95 düng mæ
  []
 
 
-Overfull \hbox (1.01393pt too wide) in paragraph at lines 505--505
+Overfull \hbox (1.01393pt too wide) in paragraph at lines 675--675
 []|\T5/cmr/m/n/10.95 Notebook,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 505--505
+Underfull \hbox (badness 10000) in paragraph at lines 675--675
 \T5/cmr/m/n/10.95 mæ h¼nh
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 505--505
+Underfull \hbox (badness 10000) in paragraph at lines 675--675
 \T5/cmr/m/n/10.95 l÷u d÷îi
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 505--505
+Underfull \hbox (badness 10000) in paragraph at lines 675--675
 \T5/cmr/m/n/10.95 b¡o c¡o
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 505--505
+Underfull \hbox (badness 10000) in paragraph at lines 675--675
 \T5/cmr/m/n/10.95 ^^_«ng ð
  []
 
-[27]
-Overfull \hbox (30.66652pt too wide) in paragraph at lines 519--520
+[35] [36]
+Overfull \hbox (30.66652pt too wide) in paragraph at lines 689--690
 \T5/cmr/m/n/10.95 https://github.com/hoangmanhduc1905/DSS_2025.2-169316---MI4216---Nhom---
  []
 
-[28] (Report.aux)
+[37] (Report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4350 strings out of 474486
- 69600 string characters out of 5753569
- 1938542 words of memory out of 5000000
- 26587 multiletter control sequences out of 15000+600000
- 573271 words of font info for 68 fonts, out of 8000000 for 9000
+ 4456 strings out of 474486
+ 71701 string characters out of 5753569
+ 1939542 words of memory out of 5000000
+ 26686 multiletter control sequences out of 15000+600000
+ 578110 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,10n,65p,910b,388s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\hoang\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi657\vntt10.pk> <C:\Users\hoang\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi657\vnti10.pk> <C:\Users\hoang\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\hoang\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi657\vnr10.pk> <C:\Users\hoang\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi657\vnbx10.pk> <C:\Users\hoang\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi600\vnr12.pk> <C:\Users\hoang\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi600\vnbx12.pk> <C:\Users\hoang\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi720\vnr12.pk> <C:\Users\hoang\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi1244\vnbx12.pk> <C:\Users\hoang\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi720\vnbx12.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Report.pdf (29 pages, 1094864 bytes).
+ 57i,10n,65p,1076b,385s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\hoang\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi657\vntt10.pk> <C:\Users\hoang\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi657\vnti10.pk> <C:\Users\hoang\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\hoang\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi657\vnr10.pk> <C:\Users\hoang\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi657\vnbx10.pk> <C:\Users\hoang\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi600\vnr12.pk> <C:\Users\hoang\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi600\vnbx12.pk> <C:\Users\hoang\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi720\vnr12.pk> <C:\Users\hoang\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi1244\vnbx12.pk> <C:\Users\hoang\AppData\Local\MiKTeX\fonts/pk/ljfour/vntex/vnr/dpi720\vnbx12.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on Report.pdf (38 pages, 1378005 bytes).
 PDF statistics:
- 803 PDF objects out of 1000 (max. 8388607)
+ 889 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 
