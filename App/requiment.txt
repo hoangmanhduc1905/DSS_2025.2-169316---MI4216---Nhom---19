@@ -1,0 +1,16 @@
+# --- Cốt lõi xử lý dữ liệu ---
+pandas>=1.5.0      # Xử lý, thao tác dữ liệu dạng bảng (DataFrame)
+numpy>=1.21.0      # Xử lý toán học, ma trận (Dùng để tính chỉ số Youden's J)
+pyarrow>=10.0.0    # Engine bắt buộc để Pandas đọc/ghi được tệp dữ liệu .parquet
+
+# --- Học máy (Machine Learning) ---
+scikit-learn>=1.2.0 # Chứa thuật toán Random Forest, Logistic, Decision Tree và các hàm đánh giá (Metrics)
+lightgbm>=3.3.0     # Chạy mô hình thuật toán Máy học tăng cường độ dốc (LightGBM)
+
+# --- Trực quan hóa dữ liệu (Visualization) ---
+matplotlib>=3.5.0  # Thư viện vẽ biểu đồ nền tảng
+seaborn>=0.12.0    # Thư viện vẽ biểu đồ nâng cao (Dùng vẽ Ma trận nhầm lẫn, Phân bố dữ liệu)
+
+# --- Triển khai và Giao diện (Deployment & UI) ---
+joblib>=1.2.0      # Tuần tự hóa (Lưu/Tải) mô hình học máy ra tệp .pkl
+streamlit>=1.20.0  # Xây dựng giao diện ứng dụng Web trực quan (Dashboard)

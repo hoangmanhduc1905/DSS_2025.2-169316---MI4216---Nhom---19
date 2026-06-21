@@ -1,38 +1,42 @@
 \babel@toc {vietnamese}{}\relax 
-\contentsline {section}{\numberline {1}Giới thiệu bài toán}{5}{}%
-\contentsline {subsection}{\numberline {1.1}Bối cảnh}{5}{}%
-\contentsline {subsection}{\numberline {1.2}Lý do chọn đề tài}{5}{}%
-\contentsline {subsection}{\numberline {1.3}Đối tượng sử dụng hệ thống}{5}{}%
-\contentsline {section}{\numberline {2}Mục tiêu hỗ trợ ra quyết định}{6}{}%
-\contentsline {subsection}{\numberline {2.1}Quyết định phân bổ ngân sách khuyến mãi}{6}{}%
-\contentsline {subsection}{\numberline {2.2}Quyết định tối ưu hóa chiến dịch Quảng cáo bám đuôi }{6}{}%
-\contentsline {subsection}{\numberline {2.3}Quyết định can thiệp hỗ trợ thời gian thực}{7}{}%
-\contentsline {section}{\numberline {3}Mô tả và tiền xử lý dữ liệu}{7}{}%
-\contentsline {subsection}{\numberline {3.1}Nguồn dữ liệu}{7}{}%
-\contentsline {subsection}{\numberline {3.2}Ý nghĩa các biến ban đầu}{7}{}%
-\contentsline {subsection}{\numberline {3.3}Kiểm tra và Đánh giá chất lượng dữ liệu}{9}{}%
-\contentsline {subsection}{\numberline {3.4}Làm sạch dữ liệu}{10}{}%
-\contentsline {subsection}{\numberline {3.5}Trích xuất đặc trưng}{11}{}%
-\contentsline {section}{\numberline {4}Khám phá dữ liệu}{13}{}%
-\contentsline {subsection}{\numberline {4.1}Phân bố dữ liệu của nhãn}{13}{}%
-\contentsline {subsection}{\numberline {4.2}Phân bố dữ liệu các đặc trưng}{14}{}%
-\contentsline {subsection}{\numberline {4.3}So sánh RFM giữa hai nhãn}{19}{}%
-\contentsline {subsection}{\numberline {4.4}Hành vi mua hàng so với các đặc trưng thời gian}{21}{}%
-\contentsline {subsection}{\numberline {4.5}Mối tương quan giữa các đặc trưng}{22}{}%
-\contentsline {section}{\numberline {5}Huấn luyện mô hình}{24}{}%
-\contentsline {subsection}{\numberline {5.1}Mục tiêu mô hình}{24}{}%
-\contentsline {subsection}{\numberline {5.2}Xây dựng mô hình}{24}{}%
-\contentsline {section}{\numberline {6}Kết quả và đánh giá}{26}{}%
-\contentsline {subsection}{\numberline {6.1}Kết quả mô hình cơ sở }{26}{}%
-\contentsline {subsection}{\numberline {6.2}Mô hình Random Forest}{27}{}%
-\contentsline {subsection}{\numberline {6.3}Mô hình sử dụng Gradient Boosting}{29}{}%
-\contentsline {subsection}{\numberline {6.4}Tổng hợp kết quả}{31}{}%
-\contentsline {section}{\numberline {7}Khuyến nghị ra quyết định}{31}{}%
-\contentsline {subsection}{\numberline {7.1}Khuyến nghị}{31}{}%
-\contentsline {subsection}{\numberline {7.2}Đánh giá Rủi ro và Hạn chế của hệ thống }{33}{}%
-\contentsline {section}{\numberline {8}Hạn chế và hướng phát triển}{34}{}%
-\contentsline {subsection}{\numberline {8.1}Hạn chế của dữ liệu và mô hình hiện tại }{34}{}%
-\contentsline {subsection}{\numberline {8.2}Hướng phát triển trong tương lai }{35}{}%
-\contentsline {section}{\numberline {9}Phân công công việc}{36}{}%
-\contentsline {section}{\numberline {10}Sử dụng AI}{37}{}%
-\contentsline {section}{\numberline {11}Minh chứng}{37}{}%
+\contentsline {section}{\numberline {1}Giới thiệu bài toán}{5}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Bối cảnh}{5}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Lý do chọn đề tài}{5}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Đối tượng sử dụng hệ thống}{5}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Mục tiêu hỗ trợ ra quyết định}{6}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Quyết định phân bổ ngân sách khuyến mãi}{6}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Quyết định tối ưu hóa chiến dịch Quảng cáo bám đuôi }{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Quyết định can thiệp hỗ trợ thời gian thực}{7}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Mô tả và tiền xử lý dữ liệu}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Nguồn dữ liệu}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Mô tả bài toán}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Ý nghĩa các biến ban đầu}{8}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Kiểm tra và Đánh giá chất lượng dữ liệu}{9}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Làm sạch dữ liệu}{10}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Trích xuất đặc trưng}{11}{subsection.3.6}%
+\contentsline {section}{\numberline {4}Khám phá dữ liệu}{13}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Phân bố dữ liệu của nhãn}{13}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Phân bố dữ liệu các đặc trưng}{14}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}So sánh RFM giữa hai nhãn}{19}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Hành vi mua hàng so với các đặc trưng thời gian}{21}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Mối tương quan giữa các đặc trưng}{22}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Huấn luyện mô hình}{24}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Mục tiêu mô hình}{24}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Xây dựng mô hình}{24}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Tiêu chí lựa chọn và đánh giá mô hình}{26}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Kiến trúc và xây dựng mô hình}{28}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Kết quả và đánh giá}{33}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Kết quả mô hình cơ sở }{33}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Mô hình Random Forest}{34}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Mô hình sử dụng Gradient Boosting}{37}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Tổng hợp kết quả}{39}{subsection.6.4}%
+\contentsline {section}{\numberline {7}Khuyến nghị ra quyết định}{40}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Khuyến nghị}{40}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Đánh giá Rủi ro và Hạn chế của hệ thống }{41}{subsection.7.2}%
+\contentsline {section}{\numberline {8}Hạn chế và hướng phát triển}{43}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Hạn chế của dữ liệu và mô hình hiện tại }{43}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Hướng phát triển trong tương lai }{43}{subsection.8.2}%
+\contentsline {section}{\numberline {9}Phân công công việc}{44}{section.9}%
+\contentsline {section}{\numberline {10}Đóng gói ứng dụng}{45}{section.10}%
+\contentsline {section}{\numberline {11}Sử dụng AI}{45}{section.11}%
+\contentsline {section}{\numberline {12}Minh chứng}{45}{section.12}%
